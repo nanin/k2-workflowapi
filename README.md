@@ -3,19 +3,25 @@ k2-workflow
 
 开发中 git 使用流程 
 -------------------
-1.发起流程
+1. 发起流程
 	start
-2.审批流程
+	
+2. 审批流程
 	Approve
-3.加签
+	
+3. 加签
 	Involve Task
-4.转签
+	
+4. 转签
 	ReAssign Task
-5.获取任务项
+	
+5. 获取任务项
 	GetTaskList
-6.获取流程状态
+	
+6. 获取流程状态
 	GetProcessStatus
-7.获取审批历史
+	
+7. 获取审批历史
 	GetProcessComments
 	
 
