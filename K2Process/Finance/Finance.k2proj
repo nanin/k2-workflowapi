@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{ac6396d4-8d57-414e-98dd-253668dbf9c2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Finance</RootNamespace>
+    <AssemblyName>Finance</AssemblyName>
+    <Language>C#</Language>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <Name>Finance</Name>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SelectedEnvironment>Development</SelectedEnvironment>
+    <DeploymentLabelName>BA_BPM_20121015</DeploymentLabelName>
+    <DeploymentLabelDescription>
+    </DeploymentLabelDescription>
+    <SmartObjectConnectionStringProperty>$Field=SmartObject Server</SmartObjectConnectionStringProperty>
+    <WorkflowManagementConnectionStringProperty>$Field=Workflow Management Server</WorkflowManagementConnectionStringProperty>
+    <HistoryIsAdvanced>Advanced</HistoryIsAdvanced>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="加班费用报销流程.kprx">
+      <SubType>Content</SubType>
+    </Content>
+    <None Include="日常费用报销流程.kprx">
+      <SubType>Content</SubType>
+      <Excluded>True</Excluded>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SourceCode\v3.5\ProjectSystem.targets" />
+</Project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f4d301a5-6d88-49f6-adba-a5d66cbdc198" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://hrapi.a.alpha.dp/WCF/HRService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HRService.disco" MetadataType="Disco" ID="aaadf8af-1701-4a6f-bf8f-4e31683acb6e" SourceId="1" SourceUrl="http://hrapi.a.alpha.dp/WCF/HRService.svc?disco" />
+    <MetadataFile FileName="HRService.xsd" MetadataType="Schema" ID="dad7964e-bfc2-482a-a4ac-5735d0dab7b1" SourceId="1" SourceUrl="http://hrapi.a.alpha.dp/WCF/HRService.svc?xsd=xsd0" />
+    <MetadataFile FileName="HRService1.xsd" MetadataType="Schema" ID="4d1f36e2-9992-47c4-8fe0-b228fb43abf7" SourceId="1" SourceUrl="http://hrapi.a.alpha.dp/WCF/HRService.svc?xsd=xsd1" />
+    <MetadataFile FileName="HRService2.xsd" MetadataType="Schema" ID="28d5cb27-8872-43a3-8f96-9f58a6cd5b9f" SourceId="1" SourceUrl="http://hrapi.a.alpha.dp/WCF/HRService.svc?xsd=xsd2" />
+    <MetadataFile FileName="HRService3.xsd" MetadataType="Schema" ID="72ec0f30-1037-44b5-9fa0-b9a067d23977" SourceId="1" SourceUrl="http://hrapi.a.alpha.dp/WCF/HRService.svc?xsd=xsd3" />
+    <MetadataFile FileName="HRService.wsdl" MetadataType="Wsdl" ID="6bc9aa14-3a0d-45db-9af2-49d02ca8ca9e" SourceId="1" SourceUrl="http://hrapi.a.alpha.dp/WCF/HRService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

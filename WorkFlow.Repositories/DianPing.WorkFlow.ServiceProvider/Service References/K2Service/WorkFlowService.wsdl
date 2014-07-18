@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Start">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="loginId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartResult" type="tns:ResultModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="tns:ResultCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ResultCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Sucess" />
+          <s:enumeration value="Fail" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Approve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="loginId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApproveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApproveResult" type="tns:ResultModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReAssignTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="assignFromLoginId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="assignFromRealName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="assignToLoginId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="assignToRealName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isAddLog" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReAssignTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReAssignTaskResult" type="tns:ResultModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryPara" type="tns:QueryCriteriaBaseOfMyTaskCriteria" />
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QueryCriteriaBaseOfMyTaskCriteria">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PagingInfo" type="tns:PaginationModel" />
+          <s:element minOccurs="0" maxOccurs="1" name="QueryCriteria" type="tns:MyTaskCriteria" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaginationModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageIndex" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SortField" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SortOrder" type="tns:SortOrder" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageCount" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SortOrder">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unspecified" />
+          <s:enumeration value="Ascending" />
+          <s:enumeration value="Descending" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="MyTaskCriteria">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LoginId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginatorLoginId" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcInstId" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessCode" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDateFrom" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDateTo" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTaskListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaskListResult" type="tns:QueryListResultBaseOfMyTaskDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QueryListResultBaseOfMyTaskDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PagingInfo" type="tns:PaginationModel" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultList" type="tns:ArrayOfMyTaskDto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMyTaskDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MyTaskDto" nillable="true" type="tns:MyTaskDto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MyTaskDto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProcInstId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OriginatorLoginId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="StartSoapIn">
+    <wsdl:part name="parameters" element="tns:Start" />
+  </wsdl:message>
+  <wsdl:message name="StartSoapOut">
+    <wsdl:part name="parameters" element="tns:StartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApproveSoapIn">
+    <wsdl:part name="parameters" element="tns:Approve" />
+  </wsdl:message>
+  <wsdl:message name="ApproveSoapOut">
+    <wsdl:part name="parameters" element="tns:ApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReAssignTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:ReAssignTask" />
+  </wsdl:message>
+  <wsdl:message name="ReAssignTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:ReAssignTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaskList" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaskListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WorkFlowServiceSoap">
+    <wsdl:operation name="Start">
+      <wsdl:input message="tns:StartSoapIn" />
+      <wsdl:output message="tns:StartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Approve">
+      <wsdl:input message="tns:ApproveSoapIn" />
+      <wsdl:output message="tns:ApproveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReAssignTask">
+      <wsdl:input message="tns:ReAssignTaskSoapIn" />
+      <wsdl:output message="tns:ReAssignTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskList">
+      <wsdl:input message="tns:GetTaskListSoapIn" />
+      <wsdl:output message="tns:GetTaskListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WorkFlowServiceSoap" type="tns:WorkFlowServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Start">
+      <soap:operation soapAction="http://tempuri.org/Start" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Approve">
+      <soap:operation soapAction="http://tempuri.org/Approve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReAssignTask">
+      <soap:operation soapAction="http://tempuri.org/ReAssignTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskList">
+      <soap:operation soapAction="http://tempuri.org/GetTaskList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WorkFlowServiceSoap12" type="tns:WorkFlowServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Start">
+      <soap12:operation soapAction="http://tempuri.org/Start" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Approve">
+      <soap12:operation soapAction="http://tempuri.org/Approve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReAssignTask">
+      <soap12:operation soapAction="http://tempuri.org/ReAssignTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskList">
+      <soap12:operation soapAction="http://tempuri.org/GetTaskList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkFlowService">
+    <wsdl:port name="WorkFlowServiceSoap" binding="tns:WorkFlowServiceSoap">
+      <soap:address location="http://wfapi.a.alpha.dp/WebService/WorkFlowService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WorkFlowServiceSoap12" binding="tns:WorkFlowServiceSoap12">
+      <soap12:address location="http://wfapi.a.alpha.dp/WebService/WorkFlowService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

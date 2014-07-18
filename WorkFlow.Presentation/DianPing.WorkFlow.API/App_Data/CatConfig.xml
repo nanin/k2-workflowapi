@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<doc>
+  <!--<domain id="BA_TEST" enabled="true" />-->
+  <domain id="BA-WorkFlow-K2" enabled="true" />
+  <servers>
+    <!--<server ip="cat.qa.dianping.com" port="2280" />-->
+    <server ip="192.168.213.115" port="2280" />
+  </servers>
+</doc>

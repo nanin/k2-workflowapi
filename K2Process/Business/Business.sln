@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D50D8A3F-5CE1-4E89-9491-F84FAB0E386A}") = "Business", "Business.k2proj", "{E45D82AA-D06A-4C98-AA75-425791420784}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.8.3:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Business.k2proj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E45D82AA-D06A-4C98-AA75-425791420784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E45D82AA-D06A-4C98-AA75-425791420784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E45D82AA-D06A-4C98-AA75-425791420784}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E45D82AA-D06A-4C98-AA75-425791420784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E45D82AA-D06A-4C98-AA75-425791420784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E45D82AA-D06A-4C98-AA75-425791420784}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

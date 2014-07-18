@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{355cd8a6-2eb7-49c0-acc9-df93c99ac4aa}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DealGroupWorkFlow</RootNamespace>
+    <AssemblyName>DealGroupWorkFlow</AssemblyName>
+    <Language>C#</Language>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Name>DealGroupWorkFlow</Name>
+    <SelectedEnvironment>Development</SelectedEnvironment>
+    <DeploymentLabelName>DIANPINGOA\jiexing.ma - 2013/7/2 14:09:42</DeploymentLabelName>
+    <DeploymentLabelDescription />
+    <SmartObjectConnectionStringProperty>$Field=SmartObject Server</SmartObjectConnectionStringProperty>
+    <WorkflowManagementConnectionStringProperty>$Field=Workflow Management Server</WorkflowManagementConnectionStringProperty>
+    <HistoryIsAdvanced>Normal</HistoryIsAdvanced>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="订单制作流程.kprx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="订单审批流程.kprx">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SourceCode\v3.5\ProjectSystem.targets" />
+</Project>

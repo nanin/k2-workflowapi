@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C6219F3-1EC5-424B-9919-67AC07ED9A1E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DianPing.WorkFlow.Domain.Interface</RootNamespace>
+    <AssemblyName>DianPing.WorkFlow.Domain.Interface</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ddo\MyTask.cs" />
+    <Compile Include="Ddo\MyTaskListResult.cs" />
+    <Compile Include="Ddo\MyTaskQueryCriteria.cs" />
+    <Compile Include="IK2Command.cs" />
+    <Compile Include="IK2CommentDomain.cs" />
+    <Compile Include="IK2ParticipateDomain.cs" />
+    <Compile Include="IK2UserDomain.cs" />
+    <Compile Include="ITaskDomain.cs" />
+    <Compile Include="IProcessInfoDomain.cs" />
+    <Compile Include="IK2CityDomain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\WorkFlow.Infrastructure\DianPing.WorkFlow.Common\DianPing.WorkFlow.Common.csproj">
+      <Project>{70EC9671-0794-4316-B6D9-E47A4FFD46C7}</Project>
+      <Name>DianPing.WorkFlow.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WorkFlow.Repositories\DianPing.WorkFlow.Repositories.Interface\DianPing.WorkFlow.Repositories.Interface.csproj">
+      <Project>{F37FA68E-7FB1-42D0-8059-2B4F3E97BB03}</Project>
+      <Name>DianPing.WorkFlow.Repositories.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

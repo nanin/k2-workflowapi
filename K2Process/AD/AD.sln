@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D50D8A3F-5CE1-4E89-9491-F84FAB0E386A}") = "AD", "AD.k2proj", "{BD715F4B-3D3C-404D-811A-D0DCDC542DEF}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://dianpingtfs:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AD.k2proj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD715F4B-3D3C-404D-811A-D0DCDC542DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD715F4B-3D3C-404D-811A-D0DCDC542DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD715F4B-3D3C-404D-811A-D0DCDC542DEF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BD715F4B-3D3C-404D-811A-D0DCDC542DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD715F4B-3D3C-404D-811A-D0DCDC542DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD715F4B-3D3C-404D-811A-D0DCDC542DEF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

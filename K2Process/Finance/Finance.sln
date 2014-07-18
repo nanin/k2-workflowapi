@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D50D8A3F-5CE1-4E89-9491-F84FAB0E386A}") = "Finance", "Finance.k2proj", "{AC6396D4-8D57-414E-98DD-253668DBF9C2}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://dianpingtfs:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Finance.k2proj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC6396D4-8D57-414E-98DD-253668DBF9C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6396D4-8D57-414E-98DD-253668DBF9C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6396D4-8D57-414E-98DD-253668DBF9C2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AC6396D4-8D57-414E-98DD-253668DBF9C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6396D4-8D57-414E-98DD-253668DBF9C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC6396D4-8D57-414E-98DD-253668DBF9C2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1AA79E4D-96E9-4A06-B8ED-28B6DFA57CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA79E4D-96E9-4A06-B8ED-28B6DFA57CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA79E4D-96E9-4A06-B8ED-28B6DFA57CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA79E4D-96E9-4A06-B8ED-28B6DFA57CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D50D8A3F-5CE1-4E89-9491-F84FAB0E386A}") = "Custom", "Custom.k2proj", "{BC3454B0-CF14-4933-9449-772331E9C96E}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.8.3:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Custom.k2proj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC3454B0-CF14-4933-9449-772331E9C96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3454B0-CF14-4933-9449-772331E9C96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3454B0-CF14-4933-9449-772331E9C96E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BC3454B0-CF14-4933-9449-772331E9C96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3454B0-CF14-4933-9449-772331E9C96E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC3454B0-CF14-4933-9449-772331E9C96E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{73465C75-7D0F-4653-ADD3-F4AB370AC31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73465C75-7D0F-4653-ADD3-F4AB370AC31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73465C75-7D0F-4653-ADD3-F4AB370AC31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73465C75-7D0F-4653-ADD3-F4AB370AC31C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

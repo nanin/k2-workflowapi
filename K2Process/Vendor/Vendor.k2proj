@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{4550fe6b-9927-4fe5-84ee-09413acc5c46}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Vendor</RootNamespace>
+    <AssemblyName>Vendor</AssemblyName>
+    <Language>C#</Language>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Name>Vendor</Name>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SelectedEnvironment>Development</SelectedEnvironment>
+    <DeploymentLabelName>DIANPINGOA\minxuan.cheng - 2012/10/8 11:19:51</DeploymentLabelName>
+    <DeploymentLabelDescription />
+    <SmartObjectConnectionStringProperty>$Field=SmartObject Server</SmartObjectConnectionStringProperty>
+    <WorkflowManagementConnectionStringProperty>$Field=Workflow Management Server</WorkflowManagementConnectionStringProperty>
+    <HistoryIsAdvanced>Normal</HistoryIsAdvanced>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="代理商变更审批流程.kprx">
+      <SubType>Content</SubType>
+      <Excluded>True</Excluded>
+    </None>
+    <Content Include="代理商审批流程.kprx">
+      <SubType>Content</SubType>
+      <Excluded>
+      </Excluded>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SourceCode\v3.5\ProjectSystem.targets" />
+</Project>

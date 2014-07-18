@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{c7f1b667-e422-4b18-b721-8da17be29f05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TuanGouV2</RootNamespace>
+    <AssemblyName>TuanGouV2</AssemblyName>
+    <Language>C#</Language>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Name>TuanGouV2</Name>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SelectedEnvironment>Development</SelectedEnvironment>
+    <DeploymentLabelName>DIANPINGOA\jiexing.ma - 2013/4/18 15:30:57</DeploymentLabelName>
+    <DeploymentLabelDescription />
+    <SmartObjectConnectionStringProperty>$Field=SmartObject Server</SmartObjectConnectionStringProperty>
+    <WorkflowManagementConnectionStringProperty>$Field=Workflow Management Server</WorkflowManagementConnectionStringProperty>
+    <HistoryIsAdvanced>Normal</HistoryIsAdvanced>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="合同变更审批流程.kprx">
+      <SubType>Content</SubType>
+      <Excluded>
+      </Excluded>
+    </Content>
+    <Content Include="合同审批流程.kprx">
+      <SubType>Content</SubType>
+      <Excluded>
+      </Excluded>
+    </Content>
+    <None Include="订单变更审批流程.kprx">
+      <SubType>Content</SubType>
+      <Excluded>True</Excluded>
+    </None>
+    <None Include="订单审批流程.kprx">
+      <SubType>Content</SubType>
+      <Excluded>True</Excluded>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SourceCode\v3.5\ProjectSystem.targets" />
+</Project>

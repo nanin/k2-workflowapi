@@ -1,0 +1,4 @@
+2013-06-29 10:00:35,645 [31] ERROR Dianping.WorkFlow.HttpPostService.Controllers.SwallowController [(null)] - 发送消息到swallow出错
+System.Exception: 出错啦
+   在 Dianping.WorkFlow.HttpPostService.Controllers.SwallowController.PostToSwallow() 位置 D:\work\workflow\Dianping.WorkFlow.HttpPostService\Controllers\SwallowController.cs:行号 94
+   在 Dianping.WorkFlow.HttpPostService.Controllers.SwallowController.Producer() 位置 D:\work\workflow\Dianping.WorkFlow.HttpPostService\Controllers\SwallowController.cs:行号 28

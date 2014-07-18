@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="StartProcess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="loginId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartProcessResult" type="tns:JsonResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="JsonResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ApproveK2Process">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="loginId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApproveK2ProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApproveK2ProcessResult" type="tns:JsonResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyTaskList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryPara" type="tns:K2TaskQueryPara" />
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="limitNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="K2TaskQueryPara">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LoginId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcInstId" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessCode" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMyTaskListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyTaskListResult" type="tns:ArrayOfK2Task" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfK2Task">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="K2Task" nillable="true" type="tns:K2Task" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="K2Task">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProcInstId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApproveURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMyStartedTaskList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryPara" type="tns:K2TaskQueryPara" />
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="limitNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyStartedTaskListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyStartedTaskListResult" type="tns:ArrayOfK2Task" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentByList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="procInstId" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentByListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommentByListResult" type="tns:ArrayOfComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfComment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Comment" nillable="true" type="tns:Comment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Comment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionTo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActivityName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AddDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CommentID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LoginID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Memo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProcInstID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RealName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProcessStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="procInstId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProcessStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProcessStatusResult" type="tns:ArrayOfK2Status" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfK2Status">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="K2Status" nillable="true" type="tns:K2Status" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="K2Status">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProcInstId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Activity" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoginIds" type="tns:ArrayOfInt" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="StartProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:StartProcess" />
+  </wsdl:message>
+  <wsdl:message name="StartProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:StartProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApproveK2ProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:ApproveK2Process" />
+  </wsdl:message>
+  <wsdl:message name="ApproveK2ProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:ApproveK2ProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyTaskListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyTaskList" />
+  </wsdl:message>
+  <wsdl:message name="GetMyTaskListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyTaskListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyStartedTaskListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyStartedTaskList" />
+  </wsdl:message>
+  <wsdl:message name="GetMyStartedTaskListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyStartedTaskListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentByListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommentByList" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentByListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommentByListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProcessStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProcessStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetProcessStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProcessStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="K2ServiceSoap">
+    <wsdl:operation name="StartProcess">
+      <wsdl:input message="tns:StartProcessSoapIn" />
+      <wsdl:output message="tns:StartProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveK2Process">
+      <wsdl:input message="tns:ApproveK2ProcessSoapIn" />
+      <wsdl:output message="tns:ApproveK2ProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyTaskList">
+      <wsdl:input message="tns:GetMyTaskListSoapIn" />
+      <wsdl:output message="tns:GetMyTaskListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyStartedTaskList">
+      <wsdl:input message="tns:GetMyStartedTaskListSoapIn" />
+      <wsdl:output message="tns:GetMyStartedTaskListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentByList">
+      <wsdl:input message="tns:GetCommentByListSoapIn" />
+      <wsdl:output message="tns:GetCommentByListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <wsdl:input message="tns:GetProcessStatusSoapIn" />
+      <wsdl:output message="tns:GetProcessStatusSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="K2ServiceSoap" type="tns:K2ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StartProcess">
+      <soap:operation soapAction="http://tempuri.org/StartProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveK2Process">
+      <soap:operation soapAction="http://tempuri.org/ApproveK2Process" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyTaskList">
+      <soap:operation soapAction="http://tempuri.org/GetMyTaskList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyStartedTaskList">
+      <soap:operation soapAction="http://tempuri.org/GetMyStartedTaskList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentByList">
+      <soap:operation soapAction="http://tempuri.org/GetCommentByList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <soap:operation soapAction="http://tempuri.org/GetProcessStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="K2ServiceSoap12" type="tns:K2ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StartProcess">
+      <soap12:operation soapAction="http://tempuri.org/StartProcess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveK2Process">
+      <soap12:operation soapAction="http://tempuri.org/ApproveK2Process" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyTaskList">
+      <soap12:operation soapAction="http://tempuri.org/GetMyTaskList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyStartedTaskList">
+      <soap12:operation soapAction="http://tempuri.org/GetMyStartedTaskList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentByList">
+      <soap12:operation soapAction="http://tempuri.org/GetCommentByList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetProcessStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="K2Service">
+    <wsdl:port name="K2ServiceSoap" binding="tns:K2ServiceSoap">
+      <soap:address location="http://bpmapi.a.alpha.dp/Webservice/K2Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="K2ServiceSoap12" binding="tns:K2ServiceSoap12">
+      <soap12:address location="http://bpmapi.a.alpha.dp/Webservice/K2Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

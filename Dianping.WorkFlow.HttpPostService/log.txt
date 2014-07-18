@@ -1,0 +1,8 @@
+2013-07-01 09:45:32,149 [5] ERROR Dianping.WorkFlow.HttpPostService.Controllers.SwallowController [(null)] - 发送消息到swallow出错
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 Dianping.WorkFlow.HttpPostService.Controllers.SwallowController.PostToSwallow() 位置 D:\work\workflow\Dianping.WorkFlow.HttpPostService\Controllers\SwallowController.cs:行号 84
+2013-07-01 09:47:17,894 [17] ERROR Dianping.WorkFlow.HttpPostService.Controllers.SwallowController [(null)] - 发送消息到swallow出错
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 Dianping.WorkFlow.HttpPostService.Controllers.SwallowController.PostToSwallow() 位置 D:\work\workflow\Dianping.WorkFlow.HttpPostService\Controllers\SwallowController.cs:行号 84

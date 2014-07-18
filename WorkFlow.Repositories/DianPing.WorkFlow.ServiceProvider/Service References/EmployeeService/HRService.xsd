@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://hrapi.a.alpha.dp/WCF/HRService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/API.HR.WCF" />
+  <xs:import schemaLocation="http://hrapi.a.alpha.dp/WCF/HRService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DianPing.HR.Application.Dto" />
+  <xs:element name="GetUsersBySalesCRMRoleType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/API.HR.WCF" minOccurs="0" name="roleType" type="q1:CRMRoleType" />
+        <xs:element minOccurs="0" name="loginId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersBySalesCRMRoleTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DianPing.HR.Application.Dto" minOccurs="0" name="GetUsersBySalesCRMRoleTypeResult" nillable="true" type="q2:ArrayOfEmployeeDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mobileNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="realName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apiKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DianPing.HR.Application.Dto" minOccurs="0" name="CreateGmailResult" nillable="true" type="q3:JsonResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
